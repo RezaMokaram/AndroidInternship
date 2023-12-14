@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="article"
+            type="com.partSoftware.heliumplus.features.article.ui.model.ArticleView" />
+
+        <variable
+            name="isShowAuthor"
+            type="Boolean" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_main"
+        android:layoutDirection="rtl">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_tagName_itemArticleList"
+            style="@style/littleChipStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="8dp"
+            android:text="@{article.tag.name}"
+            android:textAppearance="@style/boldFont"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalDivide_itemArticleList"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.66" />
+
+        <TextView
+            android:id="@+id/tv_articleTitle_itemArticleList"
+            style="@style/boldFont"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:maxLines="3"
+            android:text="@{article.title}"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@id/iv_articlePicture_itemArticleList"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalDivide_itemArticleList"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/iv_articlePicture_itemArticleList" />
+
+        <TextView
+            android:id="@+id/tv_releaseData_itemArticleList"
+            style="@style/infoTextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{article.authorNameAndDate(isShowAuthor)}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_articlePicture_itemArticleList" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_articlePicture_itemArticleList"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:adjustViewBounds="true"
+            android:background="@color/white_op32"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_gallery"
+            app:imageSrc="@{null}"
+            app:layout_constraintDimensionRatio="1:0.75"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/gl_verticalDivide_itemArticleList"
+            app:layout_constraintTop_toBottomOf="@id/chip_tagName_itemArticleList"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Image.PILL" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/divider_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_releaseData_itemArticleList" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/splashFragment">
+
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.partSoftware.heliumplus.features.authenticate.ui.fragment.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_loginRegisterFragment"
+            app:destination="@id/loginRegisterFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_HomeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginRegisterFragment"
+        android:name="com.partSoftware.heliumplus.features.authenticate.ui.fragment.LoginRegisterFragment"
+        android:label="fragment_login_register"
+        tools:layout="@layout/fragment_login_register">
+        <action
+            android:id="@+id/action_loginRegisterFragment_toLoginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/loginRegisterFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_loginRegisterFragment_toRegisterFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginRegisterFragment"
+            app:popUpToInclusive="true" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.partSoftware.heliumplus.features.authenticate.ui.fragment.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_successfullyRegisterFragment"
+            app:destination="@id/successfullyRegisterFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_registerFragment_toLoginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.partSoftware.heliumplus.features.authenticate.ui.fragment.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+
+        <action
+            android:id="@+id/action_loginFragment_toRegisterFragment"
+            app:destination="@id/registerFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/successfullyRegisterFragment"
+        android:name="com.partSoftware.heliumplus.features.authenticate.ui.fragment.SuccessfullyRegisterFragment"
+        android:label="fragment_success_fully_register"
+        tools:layout="@layout/fragment_success_fully_register">
+        <action
+            android:id="@+id/action_successfullyRegisterFragment_toLoginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/successfullyRegisterFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.partSoftware.heliumplus.features.article.ui.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_publishArticleFragment"
+            app:destination="@id/publishArticleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tagBottomSheetFragment"
+            app:destination="@id/tagBottomSheetFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.partSoftware.heliumplus.features.profile.ui.fragment.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_readArticleFragment"
+            app:destination="@id/articleDetailFragment" />
+        <argument
+            android:name="userId"
+            app:argType="integer" />
+        <argument
+            android:name="UserFullName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.partSoftware.heliumplus.features.search.ui.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/articleDetailFragment"
+        android:name="com.partSoftware.heliumplus.features.article.ui.fragment.ArticleDetailFragment"
+        android:label="fragment_read_article"
+        tools:layout="@layout/fragment_article_detail">
+
+        <argument
+            android:name="objectId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/publishArticleFragment"
+        android:name="com.partSoftware.heliumplus.features.article.ui.fragment.PublishArticleFragment"
+        android:label="fragment_add_article"
+        tools:layout="@layout/fragment_publish_article">
+        <action
+            android:id="@+id/action_publishArticleFragment_to_tagBottomSheetFragment"
+            app:destination="@id/tagBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookmarksFragment"
+        android:name="com.partSoftware.heliumplus.features.profile.ui.fragment.BookmarksFragment"
+        android:label="fragment_bookmarks"
+        tools:layout="@layout/fragment_bookmarks">
+        <action
+            android:id="@+id/action_bookmarksFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/myArticlesFragment"
+        android:name="com.partSoftware.heliumplus.features.profile.ui.fragment.MyArticlesFragment"
+        android:label="fragment_my_articles"
+        tools:layout="@layout/fragment_my_articles">
+        <action
+            android:id="@+id/action_myArticlesFragment_to_articleDetailFragment"
+            app:destination="@id/articleDetailFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagBottomSheetFragment"
+        android:name="com.partSoftware.heliumplus.features.article.ui.fragment.TagBottomSheetFragment"
+        android:label="TagBottomSheetFragment"
+        tools:layout="@layout/bottom_sheet_tags">
+    </dialog>
+</navigation>

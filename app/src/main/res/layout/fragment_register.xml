@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.partSoftware.heliumplus.features.authenticate.ui.viewModel.RegisterViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login_register"
+        android:layoutDirection="rtl"
+        tools:context=".features.authenticate.ui.fragment.RegisterFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalStart_fragmentRegister"
+            style="@style/startVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalEnd_fragmentRegister"
+            style="@style/endVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <ScrollView
+            android:id="@+id/sv_pageScroller_fragmentRegister"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentRegister"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentRegister"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_logo_fragmentRegister"
+                    style="@style/logoStyle"
+                    android:layout_width="150dp"
+                    android:layout_height="46dp"
+                    android:contentDescription="@string/label_heliumPlusLogo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_titleRegister_fragmentRegister"
+                    style="@style/titleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:text="@string/label_register"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/iv_logo_fragmentRegister" />
+
+                <TextView
+                    android:id="@+id/tv_checkAccount_fragmentRegister"
+                    style="@style/messageStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/label_doYouHaveAnAccount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_titleRegister_fragmentRegister" />
+
+                <TextView
+                    android:id="@+id/tv_login_fragmentRegister"
+                    style="@style/linkStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/label_linkToLogin"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_checkAccount_fragmentRegister"
+                    app:layout_constraintStart_toEndOf="@id/tv_checkAccount_fragmentRegister"
+                    app:layout_constraintTop_toTopOf="@id/tv_checkAccount_fragmentRegister" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_firstName_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_checkAccount_fragmentRegister"
+                    app:startIconDrawable="@drawable/ic_profile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_firstName_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@={viewModel.firstName}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_lastName_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_familyName"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_firstName_fragmentRegister"
+                    app:startIconDrawable="@drawable/ic_profile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_lastName_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@={viewModel.lastName}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_userName_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_username"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_lastName_fragmentRegister"
+                    app:startIconDrawable="@drawable/ic_profile_circle">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_userName_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="255"
+                        android:text="@={viewModel.username}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_email_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_userName_fragmentRegister"
+                    app:startIconDrawable="@drawable/ic_emails">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="255"
+                        android:text="@={viewModel.email}"
+                        android:textDirection="ltr" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_phoneNumber_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_phoneNumber"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_email_fragmentRegister"
+                    app:startIconDrawable="@drawable/ic_mobile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phoneNumber_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:text="@={viewModel.phoneNumber}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password_fragmentRegister"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_password"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_phoneNumber_fragmentRegister"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@android:color/white"
+                    app:startIconDrawable="@drawable/ic_lock_password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password_fragmentRegister"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLength="255"
+                        android:text="@={viewModel.password}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_register_fragmentRegister"
+                    style="@style/materialButtonStyle"
+                    setVisibility="@{!viewModel.isLoading}"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/label_register"
+                    app:layout_constraintTop_toBottomOf="@id/til_password_fragmentRegister" />
+
+                <ProgressBar
+                    setVisibility="@{viewModel.isLoading}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_register_fragmentRegister"
+                    app:layout_constraintEnd_toEndOf="@id/btn_register_fragmentRegister"
+                    app:layout_constraintStart_toStartOf="@id/btn_register_fragmentRegister"
+                    app:layout_constraintTop_toTopOf="@id/btn_register_fragmentRegister" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

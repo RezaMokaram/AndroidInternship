@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.partSoftware.heliumplus.features.search.ui.viewModel.SearchViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:layoutDirection="rtl">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalStart_fragmentSearch"
+            style="@style/startVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalEnd_fragmentSearch"
+            style="@style/endVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_search_fragmentSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_rounded_rectangle"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentSearch"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentSearch"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_search_fragmentSearch"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:background="@android:color/transparent"
+                app:boxBackgroundMode="none"
+                app:endIconDrawable="@drawable/ic_close"
+                app:endIconMode="clear_text"
+                app:endIconTint="@color/semi_white"
+                app:hintEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:startIconDrawable="@drawable/ic_search"
+                app:startIconTint="@color/semi_white">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_search_fragmentSearch"
+                    style="@style/regularFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:layout_marginHorizontal="4dp"
+                    android:background="@color/white_op8"
+                    android:gravity="start|center"
+                    android:hint="@string/label_searchHint"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:padding="0dp"
+                    android:text="@={viewModel.searchText}"
+                    android:textAppearance="@style/regularFont"
+                    android:textColor="@color/white_op50"
+                    android:textColorHint="@color/white_op50"
+                    android:textSize="18sp">
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/cg_tags_fragmentSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="16dp"
+            android:orientation="horizontal"
+            app:checkedChip="@id/chip_posts_fragmentSearch"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentSearch"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentSearch"
+            app:layout_constraintTop_toBottomOf="@id/cl_search_fragmentSearch"
+            app:selectionRequired="true"
+            app:singleLine="true"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_posts_fragmentSearch"
+                style="@style/chipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_posts"
+                android:textAppearance="@style/regularFont" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_tags_fragmentSearch"
+                style="@style/chipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_tags"
+                android:textAppearance="@style/regularFont" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip_users_fragmentSearch"
+                style="@style/chipStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_users"
+                android:textAppearance="@style/regularFont" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager_searchFragment"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            setVisibility="@{!viewModel.isLoading}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentSearch"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentSearch"
+            app:layout_constraintTop_toBottomOf="@id/cg_tags_fragmentSearch" />
+
+        <ProgressBar
+            setVisibility="@{viewModel.isLoading}"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/viewPager_searchFragment"
+            app:layout_constraintEnd_toEndOf="@id/viewPager_searchFragment"
+            app:layout_constraintStart_toStartOf="@id/viewPager_searchFragment"
+            app:layout_constraintTop_toTopOf="@id/viewPager_searchFragment" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

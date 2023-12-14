@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="rtl">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/bg_snackBar"
+            app:cardCornerRadius="16dp"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.constraintlayout.utils.widget.ImageFilterButton
+                    android:id="@+id/iv_warning_layoutSnackBarInternet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:src="@drawable/ic_warning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    style="@style/regularFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/message_checkTheConnection"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_warning_layoutSnackBarInternet"
+                    app:layout_constraintStart_toEndOf="@id/iv_warning_layoutSnackBarInternet"
+                    app:layout_constraintTop_toTopOf="@id/iv_warning_layoutSnackBarInternet" />
+
+                <TextView
+                    android:id="@+id/tv_tryAgain_layoutSnackBarInternet"
+                    style="@style/boldFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="@string/label_tryAgainForConnection"
+                    android:textColor="@color/primary_200"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_ignore_layoutSnackBarInternet"
+                    style="@style/boldFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:text="@string/label_ignoreConnection"
+                    android:textColor="@color/primary_200"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_tryAgain_layoutSnackBarInternet"
+                    app:layout_constraintEnd_toStartOf="@id/tv_tryAgain_layoutSnackBarInternet"
+                    app:layout_constraintTop_toTopOf="@id/tv_tryAgain_layoutSnackBarInternet" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

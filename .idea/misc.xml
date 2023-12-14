@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/bottom_sheet_tags.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_add_article.xml" value="0.264" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_bookmarks.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_home.xml" value="0.4" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_login_register.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_my_articles.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_posts.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_read_article.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_register.xml" value="0.2" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_success_fully_register.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/fragment_users.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/item_article_list.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/HeliumPlus/heliumplus/app/src/main/res/layout/item_user_list.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/bottom_sheet_tags.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_add_article.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_bookmarks.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_home.xml" value="0.264" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_login_register.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_my_articles.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_posts.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_profile.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_publish_article.xml" value="0.1" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_read_article.xml" value="0.1" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_search.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_splash.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_success_fully_register.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_tags.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/fragment_users.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/item_article_list.xml" value="0.2" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/item_my_article_list.xml" value="0.25" />
+        <entry key="..\:/Users/rezam/OneDrive/Desktop/latest hp/heliumplus/app/src/main/res/layout/item_user_list.xml" value="0.25" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable-v24/bg_circle_stroke.xml" value="0.1075" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable-v24/selector_profile.xml" value="0.132" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable-v24/selector_search.xml" value="0.132" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/bg_circle.xml" value="0.1075" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/bg_rounded_rectangle.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_add.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_add_bookmark.xml" value="0.137" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_arrow_right.xml" value="0.137" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_close.xml" value="0.137" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_person.xml" value="0.183" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_profile_active.xml" value="0.14" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/ic_profile_circle.xml" value="0.126" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/drawable/selector_home.xml" value="0.132" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/activity_main.xml" value="0.10825738746202707" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/bottom_sheet_tags.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_add_article.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_bookmarks.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_container.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_login_register.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_my_articles.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_posts.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_read_article.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_register.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_search.xml" value="0.15" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_splash.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_success_fully_register.xml" value="0.20416666666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_tags.xml" value="0.2" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/fragment_users.xml" value="0.19010416666666666" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/item_article_list.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/item_myArticle_list.xml" value="0.25" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/item_my_article_list.xml" value="0.12" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/layout/item_user_list.xml" value="0.25" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+        <entry key="..\:/programming/Android/heliumplus/app/src/main/res/xml/network_security_config.xml" value="0.25625" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
