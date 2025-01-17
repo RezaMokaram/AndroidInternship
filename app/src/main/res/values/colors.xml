@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <color name="primary_700">#6161F2</color>
+    <color name="primary_400">#9090F7</color>
+    <color name="primary_200">#B9B3FF</color>
+
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_op8">#15FFFFFF</color>
+    <color name="white_op16">#29FFFFFF</color>
+    <color name="white_op20">#35FFFFFF</color>
+    <color name="white_op32">#51FFFFFF</color>
+    <color name="white_op50">#9DFFFFFF</color>
+    <color name="white_op60">#99FFFFFF</color>
+    <color name="white_op80">#CCFFFFFF</color>
+
+    <color name="semi_white">#F7F7F7</color>
+    <color name="divider_color">#19F7F7F7</color>
+
+    <color name="black">#FF000000</color>
+    <color name="liteGray">#8593A6</color>
+    <color name="gray">#292D33</color>
+    <color name="silver">#979799</color>
+    <color name="bg_main">#02060B</color>
+    <color name="bg_bottomSheet">#171C21</color>
+    <color name="bg_chip_gray">#333333</color>
+    <color name="bg_btn_login">#010202</color>
+    <color name="bottom_sheet_silver">#667280</color>
+    <color name="bg_snackBar">#293440</color>
+</resources>

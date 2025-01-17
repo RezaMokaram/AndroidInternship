@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_main"
+        android:layoutDirection="rtl"
+        tools:context=".features.profile.ui.fragment.BookmarksFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalStart_fragmentBookmarks"
+            style="@style/startVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalEnd_fragmentBookmarks"
+            style="@style/endVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_bookMarksList_fragmentBookmark"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:clipToPadding="true"
+            android:paddingVertical="2dp"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentBookmarks"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentBookmarks" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

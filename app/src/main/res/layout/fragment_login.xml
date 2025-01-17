@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.partSoftware.heliumplus.features.authenticate.ui.viewModel.LoginViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login_register"
+        android:layoutDirection="rtl">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalStart_fragmentLogin"
+            style="@style/startVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalEnd_fragmentLogin"
+            style="@style/endVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <ImageView
+            android:id="@+id/iv_logo_fragmentLogin"
+            style="@style/logoStyle"
+            android:layout_width="150dp"
+            android:layout_height="46dp"
+            android:contentDescription="@string/label_heliumPlusLogo"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentLogin"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ScrollView
+            android:id="@+id/sv_pageScroller_fragmentLogin"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_fragmentLogin"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_fragmentLogin"
+            app:layout_constraintTop_toBottomOf="@id/iv_logo_fragmentLogin">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_titleLogin_fragmentLogin"
+                    style="@style/titleStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="32dp"
+                    android:text="@string/label_login"
+                    app:layout_constraintBottom_toTopOf="@id/til_phoneNumber_fragmentLogin"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_phoneNumber_fragmentLogin"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_phoneNumber"
+                    app:layout_constraintBottom_toTopOf="@id/til_password_fragmentLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:startIconDrawable="@drawable/ic_mobile">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_phoneNumber_fragmentLogin"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="phone"
+                        android:maxLength="11"
+                        android:text="@={viewModel.phoneNumber}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_password_fragmentLogin"
+                    style="@style/textInputLayoutStyle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_password"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@android:color/white"
+                    app:startIconDrawable="@drawable/ic_lock_password">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_password_fragmentLogin"
+                        style="@style/textInputEditTextStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:maxLength="255"
+                        android:text="@={viewModel.password}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_Login_fragmentLogin"
+                    style="@style/materialButtonStyle"
+                    setVisibility="@{!viewModel.isLoading}"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_login"
+                    app:layout_constraintBottom_toTopOf="@id/tv_checkAccount_fragmentLogin"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/til_password_fragmentLogin" />
+
+                <ProgressBar
+                    setVisibility="@{viewModel.isLoading}"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_margin="4dp"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_Login_fragmentLogin"
+                    app:layout_constraintEnd_toEndOf="@id/btn_Login_fragmentLogin"
+                    app:layout_constraintStart_toStartOf="@id/btn_Login_fragmentLogin"
+                    app:layout_constraintTop_toTopOf="@id/btn_Login_fragmentLogin" />
+
+                <TextView
+                    android:id="@+id/tv_checkAccount_fragmentLogin"
+                    style="@style/messageStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/label_doNotHaveAnAccount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btn_Login_fragmentLogin" />
+
+                <TextView
+                    android:id="@+id/tv_linkToRegister_fragmentLogin"
+                    style="@style/linkStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/label_makeAnAccount"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_checkAccount_fragmentLogin"
+                    app:layout_constraintStart_toEndOf="@id/tv_checkAccount_fragmentLogin"
+                    app:layout_constraintTop_toTopOf="@id/tv_checkAccount_fragmentLogin" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

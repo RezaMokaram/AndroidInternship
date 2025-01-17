@@ -1,0 +1,74 @@
+<resources>
+    <string name="app_name">HeliumPlus</string>
+
+    <!--MainActivity-->
+    <string name="please_enter_back_button">برای خروج، دوباره دکمه برگشت را بزنید</string>
+    <string name="label_Home">خانه</string>
+    <string name="label_profile">پروفایل</string>
+    <string name="label_search">جستجو</string>
+
+    <!-- login/register fragment -->
+    <string name="label_register">ثبت نام</string>
+    <string name="label_login">ورود</string>
+    <string name="message_heliumDescription">هلیوم پلاس بستری برای اشتراک گذاری ایده‌ها و فکر افراد پیشرو در زمینه علم و دانش</string>
+
+    <!-- register fragment -->
+    <string name="label_doYouHaveAnAccount">قبلا ثبت نام کرده‌اید؟</string>
+    <string name="label_linkToLogin">وارد شوید.</string>
+    <string name="label_name">نام</string>
+    <string name="label_familyName">نام خانوادگی</string>
+    <string name="label_username">نام کاربری</string>
+    <string name="label_email">پست الکترونیک</string>
+
+    <!-- login fragment -->
+    <string name="label_phoneNumber">شماره موبایل</string>
+    <string name="label_password">کلمه عبور</string>
+    <string name="label_doNotHaveAnAccount">حساب کاربری ندارید؟</string>
+    <string name="label_makeAnAccount">ثبت نام کنید.</string>
+    <string name="message_checkTheConnection">ارتباط با اینترنت را بررسی کنید.</string>
+    <string name="label_ignoreConnection">رد کردن</string>
+    <string name="label_tryAgainForConnection">تلاش مجدد</string>
+
+    <!-- successfully register -->
+    <string name="message_successfullyRegister">ثبت نام شما با موفقیت انجام شد.</string>
+
+    <!-- home fragment -->
+    <string name="sample_name1">حسین سالکی</string>
+
+    <!-- search fragment -->
+    <string name="label_searchHint">جستجو…</string>
+    <string name="label_posts">پست ها</string>
+    <string name="label_tags">تگ ها</string>
+    <string name="label_users">کاربران</string>
+
+    <!-- publish article fragment -->
+    <string name="message_articleSuccessfullyAddedToBookmarks">مقاله به بوکمارک‌ها اضافه شد.</string>
+    <string name="message_articleSuccessfullySent">مقاله برای انتشار ارسال شد.</string>
+    <string name="message_pleaseFillTheFields">لطفا اطلاعات را تکمیل بفرمایید!</string>
+    <string name="label_chooseTag">انتخاب تگ</string>
+    <string name="label_choose">انتخاب</string>
+    <string name="label_addTag">افزودن تگ</string>
+    <string name="label_addArticleTitle">عنوان مقاله خود را وارد کنید.</string>
+    <string name="label_addArticleBody">متن مقاله خود را وارد کنید.</string>
+    <string name="label_writeNewArticle">انتشار مقاله جدید</string>
+    <string name="label_releaseArticle">انتشار مقاله</string>
+
+    <!-- article detail fragment -->
+    <string name="label_bookmarkIcon">آیکون بوکمارک</string>
+    <string name="label_backIcon">آیکون بازگشت</string>
+
+    <!-- profile fragment -->
+    <string name="publishing">در حال انتشار</string>
+    <string name="label_bookmarks">بوکمارک‌ها</string>
+    <string name="label_myArticles">مقالات من</string>
+
+    <!-- contentDescription of ImageViews -->
+    <string name="label_closeIcon">آیکون بستن</string>
+    <string name="label_addTagIcon">آیکون افزودن تگ</string>
+    <string name="label_publishArticleButton">دکمه افزودن مقاله</string>
+    <string name="label_heliumPlusLogo">لوگو هلیوم پلاس</string>
+    <string name="label_profileIcon">آیکون پروفایل</string>
+    <string name="label_hamburgerIcon">آیکون همبرگر</string>
+    <string name="label_successfullyTikIcon">آیکون تیک موفقیت عملیات</string>
+
+</resources>

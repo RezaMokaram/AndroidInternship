@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.partSoftware.heliumplus.features.article.ui.viewModel.TagBottomSheetViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_bottomSheet"
+        android:layoutDirection="rtl">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalStart_bottomSheetTags"
+            style="@style/startVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/gl_verticalEnd_bottomSheetTags"
+            style="@style/endVerticalGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
+
+        <View
+            android:id="@+id/view_topMidLine_bottomSheetTags"
+            android:layout_width="100dp"
+            android:layout_height="2dp"
+            android:layout_marginTop="8dp"
+            android:background="@color/bottom_sheet_silver"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_chooseTag_bottomSheetTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_chooseTag"
+            android:textAppearance="@style/boldFont"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_bottomSheetTags"
+            app:layout_constraintTop_toBottomOf="@id/view_topMidLine_bottomSheetTags" />
+
+        <ImageView
+            android:id="@+id/iv_close_bottomSheetTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/label_closeIcon"
+            android:src="@drawable/ic_close"
+            app:layout_constraintBottom_toBottomOf="@id/tv_chooseTag_bottomSheetTags"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_bottomSheetTags"
+            app:layout_constraintTop_toTopOf="@id/tv_chooseTag_bottomSheetTags" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/sv_tagsScroller_bottomSheetTags"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/btn_submit_bottomSheetTags"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_chooseTag_bottomSheetTags">
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/cg_tagGroup_bottomSheetTags"
+                setVisibility="@{!viewModel.isLoading}"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_submit_bottomSheetTags"
+            style="@style/materialButtonStyle"
+            setVisibility="@{!viewModel.isLoading}"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/label_choose"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/gl_verticalEnd_bottomSheetTags"
+            app:layout_constraintStart_toStartOf="@id/gl_verticalStart_bottomSheetTags" />
+
+        <ProgressBar
+            setVisibility="@{viewModel.isLoading}"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginVertical="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
